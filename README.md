@@ -11,7 +11,7 @@ git clone https://github.com/uncuoglucan/Talya-Demo.git
 ##  NPM Scripts
 These are pre-configured npm scripts for starting the app and managing Docker.
 
-```json
+```python
 start: "node index.js",
 
 // Docker Commands
