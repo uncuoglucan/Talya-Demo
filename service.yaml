@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: talya-demo
+spec:
+  type: LoadBalancer
+  selector:
+    app: talya-demo
+  ports:
+  - port: 3030
+    targetPort: 3000

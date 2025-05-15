@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: talya-demo
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: talya-demo
+  template:
+    metadata:
+      labels:
+        app: talya-demo
+    spec:
+      containers:
+      - name: talya-demo
+        image: canuncu/talya-demo
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
